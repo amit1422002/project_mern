@@ -2,16 +2,18 @@
 .task-card {
     background-color: #fff;
     border: 1px solid #e0e0e0;
-    padding: 15px;
-    border-radius: 10px;
+    padding: 10px;  /* Reduced padding */
+    border-radius: 8px;  /* Slightly smaller radius */
     margin-bottom: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     transition: all 0.2s ease-in-out;
+    width: 260px;  /* Adjusted width for smaller cards */
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Card hover effect */
 .task-card:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 /* Task header (ID and Avatar) */
@@ -21,35 +23,49 @@
     align-items: center;
 }
 
-/* Task ID */
+/* Task ID styling */
 .task-header h5 {
-    font-size: 0.9rem;
+    font-size: 0.75rem;  /* Smaller font size */
     font-weight: 500;
     color: #6c757d;
+    margin: 0;
 }
 
-/* Task title */
+/* Task title styling */
 .task-content h4 {
-    font-size: 1.1rem;
+    font-size: 1rem;  /* Smaller font size */
     font-weight: 600;
-    margin: 10px 0;
+    margin: 8px 0;
     color: #333;
 }
 
-/* Task tag (Feature Request) */
+/* Task tag styling */
 .task-tag {
     display: inline-block;
     background-color: #f1f3f5;
     color: #495057;
-    font-size: 0.8rem;
-    padding: 5px 10px;
-    border-radius: 20px;
-    margin-top: 10px;
+    font-size: 0.75rem;  /* Smaller font size */
+    padding: 3px 8px;  /* Adjusted padding */
+    border-radius: 15px;
+    margin-top: 8px;
 }
 
-/* Avatar image */
-.task-user-avatar .avatar {
-    width: 30px;
-    height: 30px;
+/* Avatar or Initials Placeholder */
+.task-user-avatar {
+    width: 24px;
+    height: 24px;
+    background-color: #dee2e6;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #495057;
+    font-size: 0.8rem;
+}
+
+/* Priority label (optional, if displayed on the card) */
+.task-priority {
+    font-size: 0.8rem;
+    color: #868e96;
+    margin-top: 5px;
 }

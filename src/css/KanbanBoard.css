@@ -1,95 +1,196 @@
-/* Kanban board container */
-.kanban-board {
+/* Overall container */
+.kanban-container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Navbar container */
+.navbar {
+    width: 100%;
+    background-color: #f1f3f5;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Dropdown button in navbar */
+.dropdown-button {
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+}
+
+/* SVG icon in the dropdown button */
+.dropdown-button svg {
+    margin-right: 8px;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    z-index: 1;
+    min-width: 200px;
+    top: 50px;
+    left: 0;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    gap: 10px;
 }
 
-/* Control area */
-.controls {
+/* Dropdown section */
+.dropdown-section {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    flex-direction: column;
 }
 
-/* Dropdown for selecting grouping */
-select {
-    padding: 8px;
-    font-size: 1rem;
-    border-radius: 5px;
+/* Dropdown labels */
+.dropdown-content label {
+    font-size: 0.9rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Dropdown select */
+.dropdown-content select {
+    width: 100%;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    border-radius: 6px;
     border: 1px solid #ced4da;
+    background-color: #f8f9fa;
+    appearance: none;
+    cursor: pointer;
+}
+
+/* Kanban board styling */
+.kanban-board {
+    padding: 20px;
+    background-color: #f7f9fb;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 }
 
 /* Kanban columns */
 .kanban-columns {
     display: flex;
-    gap: 20px;
-    overflow-x: auto;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: nowrap;
 }
 
-/* Individual column for each user */
+/* Individual Kanban columns */
 .kanban-column {
     flex: 1;
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #e9ecef;
-    min-width: 250px;
-}
-
-/* Column header with user name */
-.kanban-column h3 {
-    text-align: left;
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: #343a40;
-    font-weight: bold;
-}
-
-/* Number of tasks next to the user name */
-.kanban-column h3 span {
-    font-size: 0.9rem;
-    color: #868e96;
-}
-
-/* Responsiveness */
-@media (max-width: 768px) {
-    .kanban-columns {
-        flex-direction: column;
-    }
-}
-/* Kanban board container */
-.kanban-board {
-    display: flex;
-    gap: 20px;
-    padding: 20px;
-    background-color: #f7f9fb;
-    flex-wrap: wrap; /* To ensure proper alignment in different screen sizes */
-}
-
-/* Kanban columns */
-.kanban-column {
-    flex: 1;
-    background-color: #f8f9fa;
+    min-width: 300px;
+    max-width: 320px;
     padding: 10px;
+    background-color: #ffffff;
     border-radius: 8px;
-    border: 1px solid #e9ecef;
-    overflow-y: auto;
-    min-width: 300px; /* Ensures the column doesn't collapse on smaller screens */
-    max-width: 25%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Column header */
-.kanban-column h3 {
-    text-align: center;
-    font-size: 1.2rem;
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 15px;
-    color: #343a40;
 }
 
-/* Spacing between columns */
-.kanban-columns {
+/* Header left side for local image, title, and task count */
+.header-left {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+    align-items: center;
+    gap: 10px;
+}
+
+/* Icon image for the column */
+.column-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;  /* Optional: You can use rounded or square images */
+}
+
+/* Header right side for buttons (plus and more options) */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Plus icon styling */
+.add-task-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Menu icon styling */
+.menu-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+/* Styling for the task count (length) in grey */
+.task-count {
+    color: #777; /* Grey color */
+    font-weight: normal; /* Optional: make it a bit lighter than the column name */
+}
+
+/* Task cards */
+.task-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Hover effect for task card */
+.task-card:hover {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Text styling inside the task cards */
+.task-card h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Styling for additional information in task cards */
+.task-card p {
+    font-size: 0.875rem;
+    color: #777;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .kanban-columns {
+        flex-wrap: wrap; /* For smaller screens, wrap the columns */
+    }
+
+    .kanban-column {
+        min-width: 100%; /* Columns will take full width on smaller screens */
+    }
 }
