@@ -1,0 +1,55 @@
+/* Card container */
+.task-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Card hover effect */
+.task-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Task header (ID and Avatar) */
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Task ID */
+.task-header h5 {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+/* Task title */
+.task-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Task tag (Feature Request) */
+.task-tag {
+    display: inline-block;
+    background-color: #f1f3f5;
+    color: #495057;
+    font-size: 0.8rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+/* Avatar image */
+.task-user-avatar .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
